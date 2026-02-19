@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DnD Battle Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-actions">
+      <button type="button" id="export-button">Eksport JSON</button>
+      <button type="button" id="import-button">Import JSON</button>
+      <input id="import-file-input" type="file" accept="application/json" hidden />
+    </div>
+  </header>
+
+  <div class="app">
+    <aside class="initiative-panel">
+      <h1>Inicjatywa</h1>
+
+      <div class="form-actions">
+        <button type="button" id="add-player-button" class="add-button" aria-label="Dodaj pusty element">+</button>
+        <button type="button" id="sort-button">Sortuj</button>
+      </div>
+
+      <ul id="initiative-list" class="initiative-list" aria-live="polite"></ul>
+    </aside>
+
+    <main class="placeholder-content">
+      <h2>DnD Battle Tracker</h2>
+      <p>Prawa strona zostaje na kolejne kroki aplikacji.</p>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

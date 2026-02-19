@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "initiative": {
+    "players": [
+      {
+        "id": 1,
+        "name": "Vaelthar",
+        "initiative": "12"
+      },
+      {
+        "id": 2,
+        "name": "Mimic",
+        "initiative": "3"
+      }
+    ],
+    "nextPlayerId": 3
+  },
+  "exportedAt": "2026-02-19T20:44:29.986Z"
+}
