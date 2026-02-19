@@ -235,7 +235,7 @@ function importStateFromJsonFile(file) {
       const normalizedState = normalizeAppState(parsedState);
 
       if (!normalizedState) {
-        alert('Niepoprawny plik JSON.');
+        alert('Invalid JSON file.');
         return;
       }
 
@@ -243,7 +243,7 @@ function importStateFromJsonFile(file) {
       saveState();
       renderAll();
     } catch {
-      alert('Nie udało się odczytać pliku JSON.');
+      alert('Failed to read JSON file.');
     }
   });
 
@@ -329,7 +329,7 @@ function renderList() {
     const nameInput = document.createElement('input');
     nameInput.className = 'initiative-name-input';
     nameInput.type = 'text';
-    nameInput.placeholder = 'Imię / nazwa';
+    nameInput.placeholder = 'Name';
     nameInput.value = player.name;
     nameInput.addEventListener('input', (event) => {
       player.name = event.target.value;
@@ -340,7 +340,7 @@ function renderList() {
     removeButton.type = 'button';
     removeButton.className = 'delete-btn';
     removeButton.textContent = '🗑';
-    removeButton.setAttribute('aria-label', 'Usuń element');
+    removeButton.setAttribute('aria-label', 'Remove entry');
     removeButton.addEventListener('click', () => {
       const playerIndex = players.findIndex((listPlayer) => listPlayer.id === player.id);
       if (playerIndex !== -1) {
@@ -422,14 +422,14 @@ function renderCharacterCards() {
     leftArrow.type = 'button';
     leftArrow.className = 'card-arrow-btn';
     leftArrow.textContent = '←';
-    leftArrow.setAttribute('aria-label', 'Przesuń w lewo');
+    leftArrow.setAttribute('aria-label', 'Move left');
     leftArrow.addEventListener('click', () => moveCardLeft(card.id));
 
     const rightArrow = document.createElement('button');
     rightArrow.type = 'button';
     rightArrow.className = 'card-arrow-btn';
     rightArrow.textContent = '→';
-    rightArrow.setAttribute('aria-label', 'Przesuń w prawo');
+    rightArrow.setAttribute('aria-label', 'Move right');
     rightArrow.addEventListener('click', () => moveCardRight(card.id));
 
     cardControls.append(leftArrow, rightArrow);
@@ -440,7 +440,7 @@ function renderCharacterCards() {
     const levelRow = document.createElement('div');
     levelRow.className = 'character-row character-row-level';
     const levelLabel = document.createElement('label');
-    levelLabel.textContent = 'Poziom';
+    levelLabel.textContent = 'Level';
     const levelInput = document.createElement('input');
     levelInput.className = 'character-input character-level-input';
     levelInput.type = 'number';
@@ -455,11 +455,11 @@ function renderCharacterCards() {
     const nameRow = document.createElement('div');
     nameRow.className = 'character-row';
     const nameLabel = document.createElement('label');
-    nameLabel.textContent = 'Imię';
+    nameLabel.textContent = 'Name';
     const nameInput = document.createElement('input');
     nameInput.className = 'character-input';
     nameInput.type = 'text';
-    nameInput.placeholder = 'Imię postaci';
+    nameInput.placeholder = 'Character name';
     nameInput.value = card.name;
     nameInput.addEventListener('input', (event) => {
       card.name = event.target.value;
@@ -516,7 +516,7 @@ function renderCharacterCards() {
     const hpActionInput = document.createElement('input');
     hpActionInput.className = 'character-input hp-action-input';
     hpActionInput.type = 'number';
-    hpActionInput.placeholder = 'Wartość';
+    hpActionInput.placeholder = 'Value';
 
     const addHpButton = document.createElement('button');
     addHpButton.type = 'button';
@@ -612,7 +612,7 @@ function renderCharacterCards() {
     const notesRow = document.createElement('div');
     notesRow.className = 'character-row';
     const notesLabel = document.createElement('label');
-    notesLabel.textContent = 'Notatki';
+    notesLabel.textContent = 'Notes';
     const notesInput = document.createElement('textarea');
     notesInput.className = 'character-textarea';
     notesInput.value = card.notes;
@@ -656,7 +656,7 @@ function renderCharacterCards() {
     addConditionButton.addEventListener('click', () => {
       const availableConditions = CONDITION_OPTIONS.filter((conditionName) => !card.conditions.includes(conditionName));
       if (availableConditions.length === 0) {
-        alert('Ta postać ma już wszystkie conditions.');
+        alert('This character already has all conditions.');
         return;
       }
 
@@ -712,7 +712,7 @@ function renderCharacterCards() {
     removeButton.type = 'button';
     removeButton.className = 'delete-btn';
     removeButton.textContent = '🗑';
-    removeButton.setAttribute('aria-label', 'Usuń kartę postaci');
+    removeButton.setAttribute('aria-label', 'Remove character card');
     removeButton.addEventListener('click', () => {
       const cardIndex = characterCards.findIndex((entry) => entry.id === card.id);
       if (cardIndex !== -1) {

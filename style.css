@@ -39,7 +39,7 @@ body {
 
 .app {
   display: grid;
-  grid-template-columns: minmax(280px, 360px) minmax(420px, 1fr) 96px;
+  grid-template-columns: minmax(240px, 320px) minmax(420px, 1fr) 120px;
   height: calc(100vh - 80px);
   gap: 14px;
   padding: 0 20px 20px;
@@ -370,6 +370,25 @@ button:active {
 .character-textarea {
   resize: vertical;
   min-height: 72px;
+}
+
+.character-textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.character-textarea::-webkit-scrollbar-track {
+  background: var(--surface);
+  border-radius: 4px;
+  margin: 4px 0;
+}
+
+.character-textarea::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+
+.character-textarea::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
 }
 
 .hp-row {

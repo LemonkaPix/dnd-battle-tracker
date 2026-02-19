@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +9,7 @@
 <body>
   <header class="topbar">
     <div class="topbar-actions">
-      <button type="button" id="export-button">Eksport JSON</button>
+      <button type="button" id="export-button">Export JSON</button>
       <button type="button" id="import-button">Import JSON</button>
       <input id="import-file-input" type="file" accept="application/json" hidden />
     </div>
@@ -17,11 +17,11 @@
 
   <div class="app">
     <aside class="initiative-panel">
-      <h1>Inicjatywa</h1>
+      <h1>Initiative</h1>
 
       <div class="form-actions">
-        <button type="button" id="add-player-button" class="add-button" aria-label="Dodaj pusty element">+</button>
-        <button type="button" id="sort-button">Sortuj</button>
+        <button type="button" id="add-player-button" class="add-button" aria-label="Add empty entry">+</button>
+        <button type="button" id="sort-button">Sort</button>
       </div>
 
       <ul id="initiative-list" class="initiative-list" aria-live="polite"></ul>
@@ -29,26 +29,26 @@
 
     <section class="characters-panel">
       <div class="characters-header">
-        <h2>Postacie</h2>
-        <button type="button" id="add-character-button" class="add-button" aria-label="Dodaj kartę postaci">+</button>
+        <h2>Characters</h2>
+        <button type="button" id="add-character-button" class="add-button" aria-label="Add character card">+</button>
       </div>
 
       <div id="character-cards" class="character-cards" aria-live="polite"></div>
     </section>
 
     <aside class="time-panel">
-      <h2>Czas</h2>
-      <ul id="time-list" class="time-list" aria-label="Wybierz aktualną godzinę"></ul>
+      <h2>Time</h2>
+      <ul id="time-list" class="time-list" aria-label="Select current hour"></ul>
     </aside>
   </div>
 
   <dialog id="condition-dialog" class="condition-dialog">
     <form method="dialog" class="condition-dialog-content">
-      <h3>Dodaj condition</h3>
-      <p class="condition-dialog-subtitle">Wybierz condition:</p>
+      <h3>Add Condition</h3>
+      <p class="condition-dialog-subtitle">Select condition:</p>
       <div id="condition-dialog-options" class="condition-dialog-options"></div>
       <div class="condition-dialog-actions">
-        <button type="submit" value="cancel">Anuluj</button>
+        <button type="submit" value="cancel">Cancel</button>
       </div>
     </form>
   </dialog>
