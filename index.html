@@ -27,11 +27,31 @@
       <ul id="initiative-list" class="initiative-list" aria-live="polite"></ul>
     </aside>
 
-    <main class="placeholder-content">
-      <h2>DnD Battle Tracker</h2>
-      <p>Prawa strona zostaje na kolejne kroki aplikacji.</p>
-    </main>
+    <section class="characters-panel">
+      <div class="characters-header">
+        <h2>Postacie</h2>
+        <button type="button" id="add-character-button" class="add-button" aria-label="Dodaj kartę postaci">+</button>
+      </div>
+
+      <div id="character-cards" class="character-cards" aria-live="polite"></div>
+    </section>
+
+    <aside class="time-panel">
+      <h2>Czas</h2>
+      <ul id="time-list" class="time-list" aria-label="Wybierz aktualną godzinę"></ul>
+    </aside>
   </div>
+
+  <dialog id="condition-dialog" class="condition-dialog">
+    <form method="dialog" class="condition-dialog-content">
+      <h3>Dodaj condition</h3>
+      <p class="condition-dialog-subtitle">Wybierz condition:</p>
+      <div id="condition-dialog-options" class="condition-dialog-options"></div>
+      <div class="condition-dialog-actions">
+        <button type="submit" value="cancel">Anuluj</button>
+      </div>
+    </form>
+  </dialog>
 
   <script src="script.js"></script>
 </body>
